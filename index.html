@@ -6,10 +6,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body ng-app="app" ng-controller="workoutCtrl">
+<div class="navbar navbar-default navbar-fixed-top top-navbar">
+    <div class="container body-content app-container">
+        <div class="navbar-header">
+            <h1>7 Minute Workout</h1>
+        </div>
 
+    </div>
 
+</div>
+<div class="container">
+    <pre>Current Exercise: {{currentExercise | json}}</pre>
+    <pre>Time Left: {{currentExercise.duration - currentExerciseDuration}}</pre>
+
+</div>
 <script src="lib/angular/angular.js"></script>
 <script src="js/app.js"></script>
 <script src="js/7MinWorkout/workout.js"></script>
